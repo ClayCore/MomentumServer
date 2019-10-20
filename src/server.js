@@ -85,7 +85,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connect all the routers and get ready to serve static content and database queries
 app.use('/', express.static(path.join(__dirname, '../frontend/build')));
-app.use('/admin', adminRouter);
+app.use('/', adminRouter);
 app.use('/api', dbRouter);
 
 // Normalize and use given port by the environment or 5000
