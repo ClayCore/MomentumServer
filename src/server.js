@@ -84,7 +84,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connect all the routers and get ready to serve static content and database queries
-app.use('/admin', express.static(path.join(__dirname, './public/')));
+app.use('/admin', express.static(path.join(__dirname, '../public/')));
+console.log.bind(console, express.static(path.join(__dirname, '../public/')));
 app.use('/admin', adminRouter);
 app.use('/api', dbRouter);
 
