@@ -9,6 +9,9 @@ router.get('/get', async (req, res) => {
         .then((data, err) => {
             if (err) return res.json({ success: false, error: err });
             return res.json({ success: true, data: data });
+        })
+        .catch(err => {
+            return res.json({success: false, error: err});
         });
 });
 
