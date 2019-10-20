@@ -89,7 +89,7 @@ app.use('/admin', adminRouter);
 app.use('/api', dbRouter);
 
 // Normalize and use given port by the environment or 5000
-const port = normalizePort(process.env.port || '5000');
+const port = normalizePort(process.env.PORT || '5000');
 app.set('port', port);
 
 // Create the main http server
