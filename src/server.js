@@ -14,7 +14,7 @@ const adminRouter = require('./routes/admin');
 const dbRouter = require('./routes/db');
 
 // Database access
-const getSecret = require('./secret');
+const getSecret = require('./routes/connect');
 const mongoose = require('mongoose');
 
 /// UTILITY FUNCTIONS
@@ -84,7 +84,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connect all the routers and get ready to serve static content and database queries
-app.use('/admin', express.static(path.join(__dirname, '../public/')));
+app.use('/admin', express.static(path.join(__dirname, '../frontend/build')));
 app.use('/admin', adminRouter);
 app.use('/api', dbRouter);
 
