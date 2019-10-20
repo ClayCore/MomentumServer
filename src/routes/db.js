@@ -6,7 +6,7 @@ let router = express.Router();
 router.get('/get', async (req, res) => {
     Users.find()
         .exec()
-        .then((data, error) => {
+        .then((data, err) => {
             if (err) return res.json({ success: false, error: err });
             return res.json({ success: true, data: data });
         });
