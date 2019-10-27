@@ -2,7 +2,7 @@
     "name": "momentum-server",
     "description": "Backend for Momentum",
     "author": "Marek Małecki",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "private": true,
     "scripts": {
         "start": "node ./src/server.js",
